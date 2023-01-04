@@ -20,16 +20,14 @@ const CardList = () => {
     <CardListContainer>
       {issueStateList.map(el => {
         return (
-          <>
-            <CardContainer>
-              <IssueHeader title={el} />
-              {data.map((issue: IssueType) => {
-                if (issue.issueState === el) {
-                  return <CardItem key={issue.id} issue={issue} />;
-                }
-              })}
-            </CardContainer>
-          </>
+          <CardContainer key={el}>
+            <IssueHeader title={el} />
+            {data.map((issue: IssueType) => {
+              if (issue.issueState === el) {
+                return <CardItem key={issue.id} issue={issue} />;
+              }
+            })}
+          </CardContainer>
         );
       })}
     </CardListContainer>
