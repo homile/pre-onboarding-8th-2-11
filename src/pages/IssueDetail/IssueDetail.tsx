@@ -46,6 +46,17 @@ const IssueDetail = (props: PropsType) => {
     props.setIsOpen(false);
   };
 
+  const deleteHandle = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
+    e.preventDefault();
+
+    localStorage.setItem(
+      'issueDatas',
+      JSON.stringify([...issueData.filter((el: IssueType) => el.id !== content.id)])
+    );
+
+    props.setIsOpen(false);
+  };
+
   return (
     <Container onClick={e => e.stopPropagation()}>
       <span>
@@ -93,6 +104,7 @@ const IssueDetail = (props: PropsType) => {
         <label>조민우2</label>
       </span>
       <button onClick={e => submitHandle(e)}>저장</button>
+      <button onClick={e => deleteHandle(e)}>삭제</button>
     </Container>
   );
 };
