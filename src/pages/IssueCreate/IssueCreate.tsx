@@ -30,7 +30,10 @@ const IssueCreate = () => {
       setContent({ ...content, manager: [...content.manager, e.target.value] });
     }
     if (!e.target.checked) {
-      setContent({ ...content, manager: [...content.manager.filter((el) => el !== e.target.value)] });
+      setContent({
+        ...content,
+        manager: [...content.manager.filter((el) => el !== e.target.value)],
+      });
     }
   };
 
@@ -53,7 +56,7 @@ const IssueCreate = () => {
         <label>상태</label>
         <select onChange={(e) => setContent({ ...content, issueState: e.target.value })}>
           <option>할 일</option>
-          <option>진행중</option>
+          <option>진행 중</option>
           <option>완료</option>
         </select>
         <span>담당자</span>
