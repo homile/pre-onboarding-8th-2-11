@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import { IssueType } from "../CardList/CardList";
+import styled from 'styled-components';
+import { IssueType } from '../CardList/CardList';
 
 interface PropsType {
   issue: IssueType;

@@ -1,6 +1,6 @@
-import styled from "styled-components";
-import IssueHeader from "../../Ui/Header/IssueHeader";
-import CardItem from "../CardItem/CardItem";
+import styled from 'styled-components';
+import IssueHeader from '../../Ui/Header/IssueHeader';
+import CardItem from '../CardItem/CardItem';
 
 export interface IssueType {
   id: number;
@@ -11,14 +11,14 @@ export interface IssueType {
   manager: string[];
 }
 
-const issueStateList = ["할 일", "진행 중", "완료"];
+const issueStateList = ['할 일', '진행 중', '완료'];
 
 const CardList = () => {
-  const data = JSON.parse(localStorage.getItem("issueDatas") || "[]");
+  const data = JSON.parse(localStorage.getItem('issueDatas') || '[]');
 
   return (
     <CardListContainer>
-      {issueStateList.map((el) => {
+      {issueStateList.map(el => {
         return (
           <>
             <CardContainer>

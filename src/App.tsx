@@ -1,6 +1,6 @@
-import { Route, Routes } from "react-router-dom";
-import IssueCreate from "./pages/IssueCreate/IssueCreate";
-import IssueMain from "./pages/Main/IssueMain";
+import { Route, Routes } from 'react-router-dom';
+import IssueCreate from './pages/IssueCreate/IssueCreate';
+import IssueMain from './pages/Main/IssueMain';
 
 const App = () => {
   return (

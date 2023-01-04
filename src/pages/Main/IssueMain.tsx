@@ -1,6 +1,6 @@
-import { Link } from "react-router-dom";
-import styled from "styled-components";
-import CardList from "../../components/Card/CardList/CardList";
+import { Link } from 'react-router-dom';
+import styled from 'styled-components';
+import CardList from '../../components/Card/CardList/CardList';
 
 const IssueMain = () => {
   return (
